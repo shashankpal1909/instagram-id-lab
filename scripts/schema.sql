@@ -1,0 +1,21 @@
+CREATE TABLE posts(
+    id BIGINT PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    shard_id INT NOT NULL,
+    content TEXT,
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- PG1 Sequences
+CREATE SEQUENCE IF NOT EXISTS shard_1_seq;
+CREATE SEQUENCE IF NOT EXISTS shard_2_seq;
+CREATE SEQUENCE IF NOT EXISTS shard_3_seq;
+
+-- PG2 Sequences
+CREATE SEQUENCE IF NOT EXISTS shard_4_seq;
+CREATE SEQUENCE IF NOT EXISTS shard_5_seq;
+CREATE SEQUENCE IF NOT EXISTS shard_6_seq;
+
+-- PG3 Sequences
+CREATE SEQUENCE IF NOT EXISTS shard_7_seq;
+CREATE SEQUENCE IF NOT EXISTS shard_8_seq;
